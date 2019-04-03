@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    overflow-y: scroll;
+}
+.wraper {
+    display: grid;
+    grid-template-columns: auto 822px auto;
+    margin: 0 auto;
+    font-family: 'Righteous', cursive, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+}
+.face {
+    display: grid;
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-image: url(bg/maja.jpg);
+    background-repeat: no-repeat;
+    height: 768px;
+    z-index: 2;
+}
+.panel {
+    position: relative;
+    display: block;
+    height: 62px;
+    width: 366px;
+    color: grey;
+    text-align: right;
+    z-index: 9999;
+    justify-self: end;
+    transition: width 0.7s ease-in-out;
+}
+.select1, .select2 {
+    height: 62px;
+    width: 366px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    transition: top 0.3s ease-in-out;
+}
+.select1 {
+    top: 30px;
+}
+.select2 {
+    top: 154px;
+}
+.panel0 {
+    height: 30px;
+    background-color: #01080e;
+}
+.panel1 {
+    background-image: url(bg/1.png);
+}
+.panel2 {
+    background-image: url(bg/2.png);
+}
+.panel3 {
+    background-image: url(bg/3.png);
+}
+.panel4 {
+    background-image: url(bg/4.png);
+}
+.panel5 {
+    background-image: url(bg/5.png);
+}
+.panel6 {
+    background-image: url(bg/6.png);
+}
+.panel7 {
+    background-image: url(bg/7.png);
+}
+.panel8 {
+    background-image: url(bg/8.png);
+}
+.panel9 {
+    background-image: url(bg/9.png);
+}
+#panel10 {
+    background-color: #01080e;
+}
+.hidebcg {
+    height:0px;
+    transition: height 0.7s ease-in-out;
+}
+.hidebcg2 {
+    width:0px;
+    right: 0;
+}
+.niceColors {
+    background-image: linear-gradient(to right, #ffe957 , #00ffb4);
+}
+#contents0 {
+    height: 50vh;
+}
+#contents2 {
+    height: 0%;
+}
+.contents {
+    margin-top: 20px;
+    padding: 12px;
+    position: absolute;
+    width: 0vw;
+    left: 370px;
+    top: 0px;
+    overflow: hidden;
+    text-align: right;
+    transition: width 0.5s ease-in-out;
+}
+.contentsShow {
+    visibility: visible;
+    width: 50vw;
+    transition: width 0.5s ease-in-out;
+    display: block;
+}
+.contentsHide {
+    overflow: hidden;
+    visibility: hidden;
+    height: 500px;
+}
+h3 {
+    font-size: 1.5rem;
+    display:inline;
+    background-color:black;
+    color:white;
+    line-height: 1.8rem;
+}
+h3::selection {
+    background-color: #00ffb4;
+}
+.close7, .close2, .close3, .close4, .close5, .close6 {
+    font-size: 7rem;
+    color: #00ffb4;
+}
+.zamknij2:hover, .zamknij3:hover, .zamknij4:hover, .zamknij5:hover, .zamknij6:hover, .zamknij7:hover {
+    color: #ffe957;
+}
+.zamknij2, .zamknij3, .zamknij4, .zamknij5, .zamknij6, .zamknij7 {
+    top: 70px;
+    right: -60px;
+    width: 0px;
+    position: absolute;
+    font-size: 3rem;
+    transition: width 0.5s ease-in-out, right 0.5s ease-in-out ;
+}
+.slideIn {
+    right: 120px;
+    width: 120px;
+}
+.social {
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+}
+.inst, .yt, .fb {
+    display: block;
+    height: 40px;
+    width: 40px;
+    float: left;
+    background-size: cover;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out ;
+    position: relative;
+}
+.inst {
+    background-image: url(bg/insta_gray.svg);
+}
+.yt {
+    background-image: url(bg/yt_gray.svg);
+}
+.fb {
+    background-image: url(bg/fb_gray.svg);
+}
+form {
+    padding: 50px 0 0 20%;
+}
+input, textarea {
+    width: 100%;
+    background-color: white;
+    font-family: 'Righteous', cursive, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    color: black;
+    border: 4px solid white;
+    border-radius: 4px;
+    margin-top: 10px;
+    opacity: 0.5;
+}
+
+input:focus, textarea:focus{
+    background-color: white;
+    color: black;
+    opacity: 1;
+}
+input::placeholder, textarea::placeholder{
+    text-align: right;
+}
+input[type=reset], input[type=submit] {
+    width: 49%;
+}
+input[type=reset]:hover, input[type=submit]:hover {
+    background-color: white;
+    color: black;
+}
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17vw, 1fr));
+    grid-gap: 1px;
+    
+}
+.pion {
+    display: grid;
+    background-color: red;
+    height: 45vw;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+    transition: all 0.3s;
+}
+.zdj1:hover:after,
+.zdj2:hover:after,
+.zdj3:hover:after,
+.zdj4:hover:after,
+.zdj5:hover:after,
+.zdj6:hover:after,
+.zdj7:hover:after,
+.zdj8:hover:after,
+.zdj9:hover:after,
+.zdj10:hover:after,
+.zdj11:hover:after,
+.zdj12:hover:after,
+.zdj13:hover:after {
+    background-color: black;
+    color: white;
+    content: 'dipa';
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: -20px;
+    left: 0;
+}
+.zdj1:hover:after{content: 'z kielecką filharmonią ';}
+.zdj2:hover:after{content: 'w programie The Voice of Poland ';}
+.zdj3:hover:after{content: 'sesja modowa';}
+.zdj4:hover:after{content: 'sesja modowa';}
+.zdj5:hover:after{content: 'sesja modowa';}
+.zdj6:hover:after{content: 'kielecki Scyzoryki';}
+.zdj7:hover:after{content: 'na próbie spektaklu';}
+.zdj8:hover:after{content: 'występ z kabaretem Czwarta Fala';}
+.zdj9:hover:after{content: 'sesja modowa';}
+.zdj10:hover:after{content: 'sesja modowa';}
+.zdj11:hover:after{content: 'sesja zdjęciowa';}
+.zdj12:hover:after{content: 'w programie All together now ';}
+.zdj13:hover:after{content: 'w programie All together now ';}
+
+.pion:hover, .poziom:hover{
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+    transform: scale(1.2);
+    z-index: 9999;
+    opacity: 1;
+}
+.poziom {
+    display: grid;
+    grid-column: span 2;
+    height: 27vw;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+    transition: all 0.3s;
+}
+.figure-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+@media all and (min-width: 820px) {
+    .iframe {
+        width:50vw; 
+        height:25vw;
+    }
+    .inst:hover, .yt:hover, .fb:hover {
+        height: 80px;
+        width: 80px;
+    }
+    .titles {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+}
+@media all and (max-width: 820px) {
+    .iframe {
+        width:100vw; 
+        height:50vw;
+    }
+    .select1, .select2, .panels {
+        display: none;
+    }
+    .social {
+        right: 20px;
+        width: 40px;
+        height: 200px;
+    }
+    .fb::after, .inst::after, .yt::after {
+        color: white;
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+    }
+    .fb::after {
+        content: 'facebook';
+    }
+    .yt::after {
+        content: 'youTube';
+    }
+    .inst::after {
+        content: 'instagram';
+    }
+    .inst:hover::after, .yt:hover::after, .fb:hover::after {
+        color: orange;
+    }
+    .inst, .yt, .fb {
+        margin-bottom: 30px;
+    }
+    .wraper {
+        grid-template-columns: 90vw;   
+    }
+    .face {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        height: 100vh;
+        z-index: 2;
+        background-size: 100% auto;
+    }
+    .contentsHide {
+        visibility: visible;
+        height: auto;
+    }
+    .contents {
+        margin: 0px 0px 100px 0;
+        left: 0;
+        padding: 0 22px 100px 22px;
+        position: relative;
+        width: 100%;
+        overflow: visible;
+        text-align: left;
+        transition: width 0.5s ease-in-out;
+    }
+    #contents6, #contents5, #contents4, #contents3, #contents1 {
+       
+        height: auto;
+    }
+    .titles {
+        font-size: 3rem;
+        color: #00ffb4;
+    }
+    .zamknij2, .zamknij3, .zamknij4, .zamknij5, .zamknij6, .zamknij7 {
+        display: none;
+    }
+    input, textarea {
+        margin-bottom: 10px;
+    }
+    .close7, .close2, .close3, .close4, .close5, .close6 {
+        display: none;
+    }
+    .menu {
+        position: fixed;
+        padding: 5px 30px;
+        bottom: 0px;
+        color: white;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(auto-fill, 7rem);
+        grid-template-rows: repeat(auto-fill, 2rem);
+        width: 100vw;
+        z-index: 9999;
+        font-size: 1.5rem;
+        background-color: black;
+        justify-items: center;
+    }
+    .maja {
+      position: absolute;
+      top: -45px;
+      left: 30px;
+      font-size: 2.3rem;
+      transition: left 0.5s ease-in-out;
+      background-color: black;
+    }
+    .item {
+        background-image: linear-gradient(to right, grey , white);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        min-width: 50px;
+    }
+    .item:hover {
+        background-image: linear-gradient(to right, #ffe957 , #00ffb4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    form {
+        padding: 0;
+    }
+    
+}
