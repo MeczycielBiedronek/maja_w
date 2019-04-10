@@ -13,8 +13,8 @@ if(isset($_POST['submit'])){
     $mail->SMTPAuth=true;
     $mail->SetLanguage("pl", "php/mailer/language/"); 
     $mail->SMTPSecure='tls';
-    $mail->Username='fistahphpmailer@gmail.com';
-    $mail->Password='PHPmailer123';
+    $mail->Username='MAIL';
+    $mail->Password='PASSWORD';
     
     $mail->setFrom($_POST['email'],$_POST['nazwa']);
     $mail->addAddress('fistah@gmail.com');
